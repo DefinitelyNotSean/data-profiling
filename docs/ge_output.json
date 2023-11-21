@@ -1,0 +1,33 @@
+{
+  "results": [
+    {
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_unique",
+        "kwargs": {
+          "column": "CustomerID"
+        }
+      },
+      "outcome": "passed"
+    },
+    {
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "Name"
+        }
+      },
+      "outcome": "failed",
+      "unexpected_percent": 25.0,
+      "details": {
+        "unexpected_list": [null]
+      }
+    },
+    // Additional expectations...
+  ],
+  "statistics": {
+    "evaluated_expectations": 4,
+    "successful_expectations": 1,
+    "unsuccessful_expectations": 3,
+    "success_percent": 25.0
+  }
+}
