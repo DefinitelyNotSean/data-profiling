@@ -1,0 +1,44 @@
+{
+  "deequValidationResult": {
+    "checkResults": {
+      "checkOnCustomerID": {
+        "constraint": "UniquenessConstraint",
+        "status": "Success",
+        "metricValue": "100%"
+      },
+      "checkOnName": {
+        "constraint": "CompletenessConstraint",
+        "status": "Failure",
+        "compliance": "75%",
+        "missingCount": 1,
+        "totalCount": 4
+      },
+      "checkOnAge": {
+        "constraint": "MinimumValueConstraint (0)",
+        "status": "Failure",
+        "compliance": "75%",
+        "failingValues": ["-5"],
+        "totalCount": 4
+      },
+      "checkOnEmail": {
+        "constraint": "PatternMatchConstraint (Email Regex)",
+        "status": "Failure",
+        "compliance": "75%",
+        "incorrectFormatCount": 1,
+        "totalCount": 4
+      },
+      "additionalMetrics": {
+        "distinctCountCustomerID": 4,
+        "averageAge": 20,
+        "minAge": -5,
+        "maxAge": 35
+      }
+    },
+    "summary": {
+      "totalConstraints": 4,
+      "passedConstraints": 1,
+      "failedConstraints": 3,
+      "dataQualityScore": "25%"
+    }
+  }
+}
