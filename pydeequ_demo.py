@@ -1,12 +1,29 @@
+import os
+
+
+# Set the environment variable for Spark version
+os.environ['SPARK_VERSION'] = '3.3'
+
+# Now import PySpark and PyDeequ modules
 from pyspark.sql import SparkSession, Row
 import pydeequ
+
+import os
+
+# Set the environment variable for Spark version
+os.environ['SPARK_VERSION'] = '3.3'
+
+
+spark = SparkSession.builder.appName("PyDeequ Test").getOrCreate()
+print("Using Spark Version:", spark.version)
+
+from py4j.java_gateway import java_import
+java_import(spark._sc._jvm, "org.apache.spark.sql.api.python.*")
+
+# Ensure this prints 3.3.x
+
 from pydeequ.checks import *
 from pydeequ.verification import *
-
-# Initialize a Spark session
-spark = SparkSession.builder \
-    .appName("PyDeequ Data Quality Checks") \
-    .getOrCreate()
 
 # Hardcoded data
 data = spark.createDataFrame([
@@ -38,3 +55,6 @@ else:
         print(f"{result.constraint}: {result.status}")
 
 spark.stop()
+
+
+
