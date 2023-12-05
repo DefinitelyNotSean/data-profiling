@@ -1,0 +1,15 @@
+AWS Glue Data Quality is a feature within AWS Glue, introduced in June 2023, designed to enhance the integrity and usefulness of data within ETL (Extract, Transform, Load) pipelines and data repositories like data lakes and data warehouses. This service offers several key functionalities:
+
+Measurement and Monitoring of Data Quality: AWS Glue Data Quality allows for the measurement and monitoring of data to distinguish between 'good' and 'bad' data. This process occurs within ETL pipelines before the data enters data lakes or data warehouses, ensuring that only high-quality data is used for data-driven decisions​​​​.
+
+Automatic Computation of Data Statistics: The service automatically computes statistics for datasets. These statistics are then used to recommend a set of quality rules. These rules check for various aspects of data quality, including freshness, accuracy, and integrity​​​​.
+
+Customization of Data Quality Rules: Users have the flexibility to adjust the recommended rules, discard certain rules, or add new ones as needed. This customization allows for a more tailored approach to maintaining data quality based on specific needs and standards​​.
+
+Alerts for Quality Issues: If AWS Glue Data Quality detects any quality issues in the data, it alerts the users. This feature helps in proactively managing and addressing data quality problems​​.
+
+Serverless Feature: As a part of AWS Glue, the Data Quality feature is serverless, eliminating the need for infrastructure management, patching, and maintenance. This aspect significantly reduces manual efforts and overhead associated with maintaining data quality infrastructure​​.
+
+Data Quality Definition Language (DQDL): AWS Glue Data Quality employs a domain-specific language called Data Quality Definition Language (DQDL). DQDL is used to define data quality rules, offering a structured and consistent way to manage data quality criteria​​.
+
+In summary, AWS Glue Data Quality provides a comprehensive and flexible approach to ensuring data quality, with features like automatic computation of statistics, customizable data quality rules, proactive alerts, and a serverless architecture, all of which contribute to maintaining the integrity and reliability of data in ETL processes and data repositories.
