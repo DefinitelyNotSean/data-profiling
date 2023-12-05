@@ -36,6 +36,11 @@ for check_result in dq_results.constraint_check_results:
         print(f"Check failed: {check_result.check_type}")
         # Handle failed checks as necessary
 
+
+
+# In this example, we've added two checks: a completeness check to ensure that at least 95% of the values in column_name are not null, and a uniqueness check to ensure that 99% of the values in unique_column are unique.
+
+# This is a simple illustration, and the real power of these checks comes when you tailor them to your specific data and requirements. AWS Glue's native data quality checks offer a range of options to enforce data quality in a flexible and scalable way.
 # Continue with ETL process
 # ...
 
